@@ -1,6 +1,7 @@
 import "./ModalFormValidate.css";
 import { useSelector, useDispatch } from "react-redux";
-export default function ModalFormValidate(props) {
+
+function ModalFormValidate(props) {
   const dispatch = useDispatch();
   const formValidate = Object.values(props)[0];
   //   Moke data for test
@@ -62,3 +63,4 @@ export default function ModalFormValidate(props) {
     );
   }
 }
+export { ModalFormValidate };
