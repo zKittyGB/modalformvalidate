@@ -1,6 +1,6 @@
 {
   "name": "modale_form_validate_component",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
