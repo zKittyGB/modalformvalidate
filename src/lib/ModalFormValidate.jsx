@@ -1,9 +1,10 @@
 import "./ModalFormValidate.css";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import ReactDOM from "react-dom";
 
-function ModalFormValidate(props) {
-  const dispatch = useDispatch();
+export default function ModalFormValidate(props) {
   const formValidate = Object.values(props)[0];
+  const closeModal = Object.values(props)[2];
   //   Moke data for test
   //   const data = {
   //     firstName: "axel",
@@ -17,7 +18,7 @@ function ModalFormValidate(props) {
   //     department: "sales",
   //   };
   const data = Object.values(props)[1];
-  if (formValidate === false) {
+  if (formValidate) {
     return (
       <div className="modal-formValidate">
         <div className="modal-formValidate-sectionLogo"></div>
@@ -52,8 +53,8 @@ function ModalFormValidate(props) {
           </div>
           <button
             className="modal-formValidate-closeButton"
-            onClick={(event) => {
-              dispatch({ type: "setCloseModal" });
+            onClick={() => {
+              closeModal();
             }}
           >
             Close
@@ -63,4 +64,3 @@ function ModalFormValidate(props) {
     );
   }
 }
-export { ModalFormValidate };
