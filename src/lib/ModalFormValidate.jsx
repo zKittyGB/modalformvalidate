@@ -7,16 +7,18 @@ export default function ModalFormValidate(props) {
   const closeModal = props.closeModal;
   if (isModalClose) {
     return (
-      <div>
+      <div className="modal">
         {props.children}
-        <button
-          className="modal-formValidate-closeButton"
-          onClick={() => {
-            closeModal();
-          }}
-        >
-          Close
-        </button>
+        <div className="modal-closeButton">
+          <button
+            className="modal-closeButton-button"
+            onClick={() => {
+              closeModal();
+            }}
+          >
+            Close
+          </button>
+        </div>
       </div>
     );
   }

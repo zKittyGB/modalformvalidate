@@ -12,11 +12,15 @@ function ModalFormValidate(props) {
   const isModalClose = props.isModalClose;
   const closeModal = props.closeModal;
   if (isModalClose) {
-    return /*#__PURE__*/_react.default.createElement("div", null, props.children, /*#__PURE__*/_react.default.createElement("button", {
-      className: "modal-formValidate-closeButton",
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "modal"
+    }, props.children, /*#__PURE__*/_react.default.createElement("div", {
+      className: "modal-closeButton"
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      className: "modal-closeButton-button",
       onClick: () => {
         closeModal();
       }
-    }, "Close"));
+    }, "Close")));
   }
 }
